@@ -38,6 +38,10 @@ RUN apt-get update && apt-get -y upgrade
 RUN export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends build-essential
 
+# Install helpful tools
+RUN export DEBIAN_FRONTEND=noninteractive \
+     && apt-get -y install --no-install-recommends bash-completion
+
 # Install Firefox
 RUN export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends firefox
